@@ -1,4 +1,4 @@
-# PPC Sloth
+# PPC Sloth (Ruby on rails)
 
 PPC Sloth is a quick and dirty keyword analyzer for Amazon Search Term Reports. It'll
 help in creating better advertising campaigns by optimizing keywords.
