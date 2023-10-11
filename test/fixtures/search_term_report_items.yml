@@ -1,0 +1,29 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  report: one
+  ad_group: one
+  keyword: one
+  search_term: one
+  currency: MyString
+  impressions: 1
+  clicks: 1
+  click_through_rate: 1
+  cost_per_click: 1
+  spend: 1
+  seven_day_total_sales: 1
+  total_advertising_cost_of_sales: 1
+
+two:
+  report: one
+  ad_group: two
+  keyword: two
+  search_term: two
+  currency: MyString
+  impressions: 1
+  clicks: 1
+  click_through_rate: 1
+  cost_per_click: 1
+  spend: 1
+  seven_day_total_sales: 1
+  total_advertising_cost_of_sales: 1

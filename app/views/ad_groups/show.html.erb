@@ -1,0 +1,63 @@
+<div class="row">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between">
+        Ad Group
+        <%= link_to 'Edit', edit_ad_group_path(@ad_group) %>
+      </div>
+      <div class="card-body">
+        <p><strong>Campaign:</strong> <%= @ad_group.campaign.name %></p>
+        <p><strong>Name:</strong> <%= @ad_group.name %></p>
+        <p><strong>Status:</strong> <%= @ad_group.status %></p>
+        <p><strong>Last Updated:</strong> <%= @ad_group.updated_at.strftime('%b %d, %Y') %></p>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        Ads
+      </div>
+      <ul class="list-group list-group-flush">
+        <% @ads.each do |ad| %>
+          <li class="list-group-item"><%= link_to ad.sku.name, ad.sku %> <span class="pill pill-primary"><%= ad.status %></span></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<h3>Keywords</h3>
+<div class="row mt-3">
+  <% @grouped_keywords.each do |match_type, keywords| %>
+    <div class="col-md-2">
+      <div class="card">
+        <div class="card-header">
+          <%= match_type.humanize %>
+        </div>
+        <ul class="list-group list-group-flush">
+          <% keywords.each do |keyword| %>
+            <li class="list-group-item"><%= link_to keyword.text, keyword %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-header">
+        Search Terms
+      </div>
+      <ul class="list-group list-group-flush">
+        <% @search_term_report_items.each do |search_term_report_item| %>
+          <li class="list-group-item"><%= link_to search_term_report_item.search_term.text, search_term_report_item.search_term %> <span class="pill pill-primary"><%= search_term_report_item.keyword.text %></span></li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>

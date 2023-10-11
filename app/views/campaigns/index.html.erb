@@ -1,0 +1,25 @@
+<%= breadcrumbs_helper([
+  { text: 'Dashboard', path: root_path },
+  { text: 'Campaigns', path: campaigns_path }
+]) %>
+
+<div class="row mt-3">
+  <div class="col-md-12">
+    <table class="table table-bordered dataTable" id="dataTable" width="100%" cellspacing="0" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Targeting Type</th>
+          <th>Status</th>
+          <th>Clicks</th>
+          <th>Impressions</th>
+          <th>Spend</th>
+          <th>Sales</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: 'campaign', collection: @campaigns %>
+      </tbody>
+    </table>
+  </div>
+</div>
